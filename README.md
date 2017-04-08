@@ -19,17 +19,16 @@ opam pin add -y ReasonNativeProject .
 
 ### Build
 
-There are a couple of built-in commands in the `Makefile`.
 
 ```sh
-make build    # build/rebuild your files
-make clean    # clean the compiled artifacts
+jbuilder build @install # build/rebuild your files
+rm -rf _build # clean the compiled artifacts
 ```
 
 A single test file `./src/test.re` is included. Make a simple change to it and
 then run the commands above to see it effect the output.
 
-The built output is in `_build`. Try running it with `_build/src/test.native`.
+The built output is in `_build`. Try running it with `_build/default/src/app.exe`.
 
 ## Developing Your Project
 

@@ -16,6 +16,53 @@ cd ReasonNativeProject
 # opam will read into the `opam` file and add the other dependencies
 opam pin add -y ReasonNativeProject .
 ```
+## Project structure
+
+This project is called =reasonnativeproject=. It defines one library called
+=reasonnativeprojectlib= and one executable called =app=.
+
+The library is defined in =lib= and the executable in =src=. It also
+defines a test in =test=.
+
+At the toplevel of the project, there is a =reasonnativeproject.opam=
+file. This file is required so that =jbuilder= knows that this is the
+=reasonantiveproject= project.
+
+To build everything that is meant to be installed in this project,
+type:
+
+#+begin_src
+$ jbuilder build @install
+#+end_src
+
+To run the tests, type:
+
+#+begin_src
+$ jbuilder runtest
+#+end_src
+
+```
+.
+├── _build            # build artifacts 
+├── README.md
+├── circle.yml
+├── jbuild-workspace
+├── lib
+│   ├── jbuild
+│   ├── messenger.re
+│   └── messenger.rei
+├── reasonnativeproject.install
+├── reasonnativeproject.opam
+├── src
+│   ├── _build
+│   │   └── log
+│   ├── app.re
+│   ├── jbuild
+│   └── messenger.re
+└── test
+    ├── jbuild
+    └── test.re
+```
 
 ### Build
 

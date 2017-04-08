@@ -1,0 +1,1 @@
+let generate: unit => string;

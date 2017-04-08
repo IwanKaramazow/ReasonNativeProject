@@ -7,9 +7,8 @@ dependencies:
         - opam switch --no-switch 4.02.3 # Download and compile all the versions
         - opam switch --no-switch 4.03.0
         - opam switch --no-switch 4.04.0
+        - opam switch --no-switch 4.05.0
 
 test:
     override:
-        - ./test-with-version.sh 4.02.3
-        - ./test-with-version.sh 4.03.0
-        - ./test-with-version.sh 4.04.0
+        - jbuilder runtest  

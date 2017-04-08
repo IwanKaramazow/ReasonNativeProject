@@ -31,22 +31,25 @@ file. This file is required so that =jbuilder= knows that this is the
 To build everything that is meant to be installed in this project,
 type:
 
-#+begin_src
+```
 $ jbuilder build @install
-#+end_src
+$ ./_build/default/src/app.exe
+# or
+$ opam pin add -y reasonnativeproject .
+reasonNativeApp
+```
 
 To run the tests, type:
 
-#+begin_src
+```
 $ jbuilder runtest
-#+end_src
+```
 
 ```
 .
-├── _build            # build artifacts 
+├── _build             # build artifacts 
 ├── README.md
 ├── circle.yml
-├── jbuild-workspace
 ├── lib
 │   ├── jbuild
 │   ├── messenger.re
@@ -54,11 +57,8 @@ $ jbuilder runtest
 ├── reasonnativeproject.install
 ├── reasonnativeproject.opam
 ├── src
-│   ├── _build
-│   │   └── log
 │   ├── app.re
 │   ├── jbuild
-│   └── messenger.re
 └── test
     ├── jbuild
     └── test.re
